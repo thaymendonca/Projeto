@@ -1,0 +1,12 @@
+.logo{
+    background-image: url("../img/logotipo-preto.png");
+    background-repeat: no-repeat; /* Propriedade para não repetir a imagem */
+    display: block; /* No H1 já tem display block, mas foi adicionada essa propriedade caso essa classe seja usada em outro elemento do tipo inline */
+    width: 120px;
+    height: 53px;
+    text-indent: -9999px; /* "Gambiarra" utilizada para fazer o texto(Designe Responsivo) sumir da caixa/bloco em que ele esta contido */
+    margin:0;
+    &--branco{
+        background-image: url("../img/logotipo-branco.png");
+    }
+}

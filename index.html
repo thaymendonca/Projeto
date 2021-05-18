@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A meta tag viewport é muito importante para criar um designer responsivo.
+    É a primeira configuração que vai fazer o site se adaptar a diferentes dispositivos.
+    O conteúdo dela tem dois valores: width(largura do site) = device-width(largura do dispositivo).
+    Esse conteúdo faz com que a largura do site acompanhe a largura do dispositivo.
+    O initial-scale faz com que o site seja carregado sem nenhum zoom aplicado-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--A meta tag http-equiv é responsável por dar suporte aos Internet Explorers mais antigos(7,8, 9 e 10).
+    OBS: Internet Explore do 11 em diante funcionam sem essa tag.-->
+    <title>Design Responsivo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container"> <!-- Inicio Container -->
+            <h1 class="logo">Design Responsivo</h1>
+            <nav class="menu-principal">
+                <button class="menu-principal__btn">Abrir/fechar menu</button><!-- Elemento (Block Element Modifier) -->
+                <ul class="menu-principal__lista">
+                    <li><a class="menu-principal__item menu-principal__item--atual" href="index.html">Home</a></li>
+                    <li><a class="menu-principal__item" href="sobre.html">Sobre nós</a></li>
+                    <li><a class="menu-principal__item" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="menu-principal__item" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div> <!-- Fim Container -->
+    </header>
+    <main>
+        <header class="cabecalho-home">
+            <h2 class="cabecalho-home__titulo">Texto grande bem aqui!</h2>
+            <p class="cabecalho-home__subtitulo">Texto menorzinho aqui</p>
+            <a class="cabecalho-home__role" href="#servicos">role para ver mais</a><!-- o atributo href escrito dessa forma vai linkar para uma área dentro da própria página, que é a área de serviços -->
+        </header>
+        <section id="servicos" class="servicos"><!-- Seção serviços - ID foi usado para linkar com o href="#servicos" (role para ver mais) -->
+            <div class="container"> <!-- Inicio Container -->
+                <h2 class="home__titulo">O que fazemos</h2>
+                <section class="servicos__item">
+                    <img src="img/icone-desenvolvimento-web.png" alt="Ícone planeta terra">
+                    <h3>Desenvolvimento Web</h3>
+                    <p class="servicos__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum ex a nunc fermentum congue. Aliquam dignissim pulvinar arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+                <section class="servicos__item">
+                    <img src="img/icone-carrinho-compras.png" alt="Ícone carrinho de compras">
+                    <h3>E-commerce</h3>
+                    <p class="servicos__texto">In hac habitasse platea dictumst. Proin ut pellentesque mauris. Nunc in varius justo. Phasellus vulputate ut neque non auctor. Fusce vitae urna egestas, finibus ante non, laoreet nunc.</p>
+                </section>
+                <section class="servicos__item">
+                    <img src="img/icone-cafe.png" alt="Ícone xícara de café">
+                    <h3>Café</h3>
+                    <p class="servicos__texto">Aliquam ac lorem sapien. Nullam suscipit purus vel erat aliquam scelerisque. Aenean sed turpis a nibh laoreet iaculis a et nulla. Aenean at felis ex. Nulla ut dui aliquet, fermentum massa vitae, accumsan erat.</p>
+                </section>
+            </div><!-- Fim Container -->
+        </section><!-- Fim seção serviços -->
+        <section class="depoimentos"><!--Seção depoimentos-->
+            <div class="container">
+                <h2 class="home__titulo home__titulo--branco">O que falam de nós</h2>
+                <section class="depoimentos__item">
+                    <img class="depoimentos__img" src="img/depoimentos/pessoa-1.jpg" alt="Foto pessoa x">
+                    <p class="depoimentos__texto">Phasellus dapibus sapien et est blandit, ornare interdum arcu iaculis. Vestibulum placerat ex sit amet erat mattis bibendum. Mauris non mi augue.</p>
+                    <p class="depoimentos__pessoa">Nome Pessoa - Cargo</p>
+                </section>
+            </div>
+        </section><!--Fim Seção depoimentos-->
+    </main>
+    <footer class="rodape">
+        <div class="rodape__linha-1">
+            <div class="container"> <!-- Inicio Container -->
+                <div class="rodape__coluna">
+                    <a href="index.html" class="logo logo--branco">Design Responsivo</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur adipisci quia velit repudiandae eveniet maiores iusto cumque ipsum molestias, magnam suscipit repellat laboriosam, amet sequi ullam laudantium accusamus iste! Nam?</p>
+                </div>
+                <div class="rodape__coluna">
+                    <h2 class="rodape__titulo">Social</h2>
+                    <ul class="rodape__lista-links">
+                        <li><a class="rodape__lista-links__item" href="https://twitter.com/thaymend0nca" target="_blank">Twitter</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.facebook.com/thayna.mendonca.56" target="_blank">Facebook</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.instagram.com/iamth4y/" target="_blank">Instagram</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.youtube.com" target="_blank">Youtube</a></li>
+                        <!--O atributo 'target=_blank' faz com que os links sejam abertos em uma nova aba da internet-->
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h2 class="rodape__titulo">Links</h2>
+                    <ul class="rodape__lista-links">
+                        <li><a class="rodape__lista-links__item" href="index.html">Home</a></li>
+                        <li><a class="rodape__lista-links__item" href="sobre.html">Sobre nós</a></li>
+                        <li><a class="rodape__lista-links__item" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="rodape__lista-links__item" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div> <!-- Fim Container -->
+        </div>
+        <div class="rodape__linha-2">
+            © 2020 - Todos os direitos reservados - Thayná Mendonça
+        </div>
+        <!--a tag div é usada para separar coisas VISUALMENTE-->
+    </footer>
+</body>
+</html>

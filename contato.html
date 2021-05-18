@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Design Responsivo - Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container"> <!-- Inicio Container -->
+            <a href="index.html" class="logo">Design Responsivo</a>
+            <nav class="menu-principal">
+                <button class="menu-principal__btn">Abrir/fechar menu</button><!-- Elemento (Block Element Modifier) -->
+                <ul class="menu-principal__lista">
+                    <li><a class="menu-principal__item" href="index.html">Home</a></li>
+                    <li><a class="menu-principal__item" href="sobre.html">Sobre nós</a></li>
+                    <li><a class="menu-principal__item" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="menu-principal__item menu-principal__item--atual" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div> <!-- Fim Container -->
+    </header>
+    <main>
+        <header class="pagina-cabecalho">
+            <h1 class="pagina-cabecalho__titulo">Contato</h1>
+        </header>
+        <section class="container pagina-conteudo"><!-- Inicio Container -->
+            <p class="text-center">Suspendisse convallis, turpis vitae placerat luctus, est felis dictum augue.</p>
+            <form action="#" class="formulario">
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="nome">Nome</label><br>
+                    <input class="formulario__campo" id="nome" type="text" name="nome">
+                </div>
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="email">E-mail</label><br>
+                    <input class="formulario__campo" id="email" type="email" name="email">
+                </div>
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="mensagem">Mensagem</label><br>
+                    <textarea class="formulario__campo" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+
+                <input type="submit" class="formulario__botao" value="Enviar">
+
+            </form>
+            
+            <p class="text-center">
+                Maecenas facilisis volutpat ipsum, sed faucibus tortor aliquam non.<br>
+                Aliquam erat volutpat. Vivamus cursus pulvinar turpis, nec blandit augue maximus ac.
+            </p>
+        </section>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.6609101021286!2d-43.168514580496044!3d-22.962711999987274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998006daa2b199%3A0xba194fd3e8801561!2sPosto%201!5e0!3m2!1spt-BR!2sbr!4v1600654464959!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- Nesta div foi adicionado a tag iframe que exibe no nosso site um mapa do google maps. A tag iframe que faz isso acontecer. 
+                A tag iframe é o que permite abrir um site dentro do outro, nesse caso, abrir um mapa do google maps. -->
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="rodape__linha-1">
+            <div class="container">
+                <div class="rodape__coluna"><!-- Inicio Container -->
+                    <a href="index.html" class="logo logo--branco">Design Responsivo</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur adipisci quia velit repudiandae eveniet maiores iusto cumque ipsum molestias, magnam suscipit repellat laboriosam, amet sequi ullam laudantium accusamus iste! Nam?</p>
+                </div>
+                <div class="rodape__coluna">
+                    <h2 class="rodape__titulo">Social</h2>
+                    <ul class="rodape__lista-links">
+                        <li><a class="rodape__lista-links__item" href="https://twitter.com/thaymend0nca" target="_blank">Twitter</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.facebook.com/thayna.mendonca.56" target="_blank">Facebook</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.instagram.com/iamth4y/" target="_blank">Instagram</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://www.youtube.com" target="_blank">Youtube</a></li>
+                        <!--O atributo 'target=_blank' faz com que os links sejam abertos em uma nova aba da internet-->
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h2 class="rodape__titulo">Links</h2>
+                    <ul class="rodape__lista-links">
+                        <li><a class="rodape__lista-links__item" href="index.html">Home</a></li>
+                        <li><a class="rodape__lista-links__item" href="sobre.html">Sobre nós</a></li>
+                        <li><a class="rodape__lista-links__item" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="rodape__lista-links__item" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div><!-- Fim Container -->
+        </div>
+        <div class="rodape__linha-2">
+            © 2020 - Todos os direitos reservados - Thayná Mendonça
+        </div>
+        <!--a tag div é usada para separar coisas VISUALMENTE-->
+    </footer>
+</body>
+</html>

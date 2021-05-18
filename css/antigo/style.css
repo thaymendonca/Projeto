@@ -1,0 +1,152 @@
+/* BASE */
+*{
+    box-sizing: border-box; /* Muito importante para criar layouts */
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* @font-face não é um seletor, é uma regra para chamar uma fonte para dentro do site */
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf'); /* Definindo o caminho até o arquivo da fonte */
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-Bold.otf');
+    font-weight: bold; /* Essa propriedade foi usada para não sobrescrever. Assim quando for definido que um texto é em negrito
+    ele vai puxar de outra fonte no arquivo(que ja esta em negrito) */
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-BoldIt.otf');
+    font-weight: bold; 
+    font-style: italic;
+}
+
+body{
+    font-family: "Source Sans Pro"; 
+}
+
+/* Início HEADER */
+.cabecalho{
+    background: #fff;
+    padding: 15px;
+}
+
+/* LOGO */
+.logo{
+    background-image: url("../img/logotipo-preto.png");
+    background-repeat: no-repeat; /* Propriedade para não repetir a imagem */
+    display: block; /* No H1 já tem display block, mas foi adicionada essa propriedade caso essa classe seja usada em outro elemento do tipo inline */
+    width: 120px;
+    height: 53px;
+    text-indent: -9999px; /* "Gambiarra" utilizada para fazer o texto(Designe Responsivo) sumir da caixa/bloco em que ele esta contido */
+    margin:0;
+}
+.logo--branco{
+    background-image: url("../img/logotipo-branco.png");
+}
+
+/*
+BEM(Block Element Modifier): 
+Bloco(menu-principal) 
+Elemento(.menu-principal__btn) 
+Modificador(menu-principal__btn--fechar) 
+*/
+
+/* Elemento */
+.menu-principal__btn{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    background-color: #fff;
+    background-image: url('../img/menuprincipal-btn-bg.png');
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+/* Classe modificadora */
+.menu-principal__btn--fechar{
+    background-position: -48px 7px;
+}
+
+/* início lista menu */
+.menu-principal__lista{
+    padding: 0;
+    list-style: none;
+}
+
+.menu-principal__item{
+    text-decoration: none;
+    font-weight: bold;
+    color: #343434;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block; /* Se usa pq menu-principal__item é do tipo inline(a) */
+}
+/* fim lista menu */
+
+/* Classe modificadora */
+.menu-principal__item--atual{
+    color: #f44242;
+}
+
+/* Fim HEADER */
+
+/* Início FOOTER */
+.rodape{
+    color: #fff;
+}
+.rodape .logo{ /* Este seletor vai selecionar todas as classes logo que tem dentro do rodape */
+    margin-bottom: 20px;
+}
+.rodape__linha-1{
+    background-color: #272525; /* Usar cor de fundo caso a img não apareça para que o usuário ele consiga ler. Se o fundo ficasse branco ele não conseguiria, pois as letras são brancas */
+    background-image: url('../img/rodape-bg.jpg');
+    background-size: cover; /* O valor cover garante que a img ocupe todo o espaço do background */
+    padding: 15px;
+}
+.rodape__linha-2{
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+}
+.rodape__coluna{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.rodape__titulo{
+    border-bottom: 1px solid #fff;
+    padding: 0 10px 10px 10px;  /* Sentido Horário (Em cima, direita, baixo, esquerda) */
+    font-size: 18px;
+}
+.rodape__lista-links{
+    padding: 0;
+    list-style: none; /* Tira as bolinhas das listas */
+}
+.rodape__lista-links__item{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Utilizando o seletor de pseudo elemento before para adicionar o '>' antes dos links */
+.rodape__lista-links__item::before{
+    content: '>';
+    margin-right: 8px;
+    color: #f44242;
+}

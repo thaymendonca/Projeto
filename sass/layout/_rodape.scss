@@ -1,0 +1,43 @@
+.rodape{
+    color: #fff;
+    & .logo{ /* Este seletor vai selecionar todas as classes logo que tem dentro do rodape */
+        margin-bottom: 20px;
+    }
+    &__linha-1{
+        background-color: #272525; /* Usar cor de fundo caso a img não apareça para que o usuário ele consiga ler. Se o fundo ficasse branco ele não conseguiria, pois as letras são brancas */
+        background-image: url('../img/rodape-bg.jpg');
+        background-size: cover; /* O valor cover garante que a img ocupe todo o espaço do background */
+        padding: 15px;
+    }
+    &__linha-2{
+        background-color: #000;
+        text-align: center;
+        padding: 15px;
+    }
+    &__coluna{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__titulo{
+        border-bottom: 1px solid #fff;
+        padding: 0 10px 10px 10px;  /* Sentido Horário (Em cima, direita, baixo, esquerda) */
+        font-size: 18px;
+    }
+    &__lista-links{
+        padding: 0;
+        list-style: none; /* Tira as bolinhas das listas */
+    }
+    &__lista-links__item{
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    /* Utilizando o seletor de pseudo elemento before para adicionar o '>' antes dos links */
+    &__lista-links__item::before{
+        content: '>';
+        margin-right: 8px;
+        color: $cor-principal;
+    }
+}

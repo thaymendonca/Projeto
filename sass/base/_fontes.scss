@@ -1,0 +1,16 @@
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf'); /* Definindo o caminho até o arquivo da fonte */
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-Bold.otf');
+    font-weight: bold; /* Essa propriedade foi usada para não sobrescrever. Assim quando for definido que um texto é em negrito
+    ele vai puxar de outra fonte no arquivo(que ja esta em negrito) */
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-BoldIt.otf');
+    font-weight: bold; 
+    font-style: italic;
+}
